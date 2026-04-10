@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.type.automotive" />
+
+<!--    <uses-permission android:name="android.car.permission.CAR_SPEED" /> &lt;!&ndash; permission required to display car speed&ndash;&gt;-->
+<!--    <uses-permission android:name="android.car.permission.ENERGY"/> &lt;!&ndash; permission required to display EV_BATTERY_LEVEL&ndash;&gt;-->
+<!--    <uses-permission android:name="android.car.permission.CAR_INFO"/> &lt;!&ndash; permission required to display INFO_EV_BATTERY_CAPACITY &ndash;&gt;-->
+<!--    <uses-permission android:name="android.car.permission.ENERGY_PORTS"/> &lt;!&ndash; permission required to display EV_CHARGE_PORT_CONNECTED &ndash;&gt;-->
+
+    <uses-permission android:name="android.car.permission.CAR_SPEED" /> <!-- permission required to display car speed-->
+    <uses-permission android:name="android.car.permission.CAR_ENERGY" /> <!-- permission required to display EV_BATTERY_LEVEL-->
+    <uses-permission android:name="android.car.permission.CAR_INFO" /> <!-- permission required to display INFO_EV_BATTERY_CAPACITY -->
+    <uses-permission android:name="android.car.permission.CAR_ENERGY_PORTS" /> <!-- permission required to display EV_CHARGE_PORT_CONNECTED -->
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_CLIMATE" /> <!-- permission required to display HVAC_AC_ON -->
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VehicleControlHub">
+
+<!--        <uses-library-->
+<!--            android:name="android.car"-->
+<!--            android:required="true" />-->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
