@@ -6,6 +6,21 @@ This project is built as part of learning and exploring **Automotive AOSP / AAOS
 
 ---
 
+👨‍💻 Author
+
+Abhishek Mandal
+
+Backend Engineer (Java / Spring Boot)
+Exploring Automotive / AAOS domain
+Interested in Connected Vehicles & OTA systems
+
+---
+
+### 📌 Note
+This project is for learning and experimentation purposes and does not represent a production-ready automotive system.
+
+---
+
 ## 📌 Features Implemented
 
 ### ✅ Telemetry Module
@@ -115,14 +130,3 @@ Lighting control
 Vehicle diagnostics
 Integrate CAN / vehicle simulation data
 Improve UI/UX for automotive HMI
-👨‍💻 Author
-
-Abhishek Mandal
-
-Backend Engineer (Java / Spring Boot)
-Exploring Automotive / AAOS domain
-Interested in Connected Vehicles & OTA systems
-
-
-📌 Note
-This project is for learning and experimentation purposes and does not represent a production-ready automotive system.
