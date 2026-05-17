@@ -24,6 +24,7 @@ class DashboardPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(
             2 -> PlaceholderFragment.newInstance("Seats - Coming soon")
             3 -> PlaceholderFragment.newInstance("Lights - Coming soon")
             4 -> PlaceholderFragment.newInstance("Body Control - Coming soon")
+            2 -> SeatFragment() //PlaceholderFragment.newInstance("Seats - Coming soon")
             5 -> CameraFragment()
             else -> PlaceholderFragment.newInstance("Coming soon")
         }

@@ -35,7 +35,7 @@ class TelemetryFragment : Fragment() {
         }
 
         override fun onErrorEvent(propertyId: Int, areaId: Int) {
-            Log.e(tag, "Error propertyId=$propertyId areaId=$areaId")
+            Log.e(tag, "Telemetry Error propertyId=$propertyId areaId=$areaId")
         }
     }
 

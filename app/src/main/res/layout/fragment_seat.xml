@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#05030f">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvSeatTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seat Controls"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/seat_panel_border"
+            android:padding="8dp">
+
+            <!-- FRONT ROW -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- FRONT PASSENGER -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:minHeight="120dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:background="@drawable/seat_cell_border">
+
+                    <TextView
+                        android:text="Passenger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                    <!--HEATING-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:text="Heating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp">
+
+                            <Button
+                                android:id="@+id/btnPassengerDecrease"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:padding="0dp"
+                                android:insetLeft="0dp"
+                                android:insetRight="0dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="-"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@android:color/holo_purple" />
+
+                            <TextView
+                                android:id="@+id/tvPassengerLevel"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:text="Off"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp"
+                                android:gravity="center" />
+
+                            <Button
+                                android:id="@+id/btnPassengerIncrease"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:padding="0dp"
+                                android:insetLeft="0dp"
+                                android:insetRight="0dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="+"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@android:color/holo_purple" />
+                        </LinearLayout>
+                    </LinearLayout>>
+
+
+                    <!--SEAT POSITION-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:text="Position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:paddingTop="10dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp">
+
+                            <Button
+                                android:id="@+id/btnPassengerSeatBackward"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:padding="0dp"
+                                android:insetLeft="0dp"
+                                android:insetRight="0dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="&lt;"
+                                android:textSize="11sp"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@android:color/holo_purple" />
+
+                            <TextView
+                                android:id="@+id/tvPassengerSeatPosition"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:text="Pos:0"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                            <Button
+                                android:id="@+id/btnPassengerSeatForward"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:padding="0dp"
+                                android:insetLeft="0dp"
+                                android:insetRight="0dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="&gt;"
+                                android:textSize="11sp"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@android:color/holo_purple" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- DRIVER -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:minHeight="120dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:background="@drawable/seat_cell_border">
+
+                    <TextView
+                        android:text="Driver"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                    <!-- HEATING -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:text="Heating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp">
+
+                            <Button
+                                android:id="@+id/btnDriverDecrease"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:padding="0dp"
+                                android:insetLeft="0dp"
+                                android:insetRight="0dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="-"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@android:color/holo_purple" />
+
+                            <TextView
+                                android:id="@+id/tvDriverLevel"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:text="Off"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                            <Button
+                                android:id="@+id/btnDriverIncrease"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:padding="0dp"
+                                android:insetLeft="0dp"
+                                android:insetRight="0dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="+"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@android:color/holo_purple" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SEAT POSITION-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:text="Position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:paddingTop="10dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp">
+
+                            <Button
+                                android:id="@+id/btnDriverSeatBackward"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:padding="0dp"
+                                android:insetLeft="0dp"
+                                android:insetRight="0dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="&lt;"
+                                android:textSize="11sp"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@android:color/holo_purple" />
+
+                            <TextView
+                                android:id="@+id/tvDriverSeatPosition"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:text="Pos:0"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                            <Button
+                                android:id="@+id/btnDriverSeatForward"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:padding="0dp"
+                                android:insetLeft="0dp"
+                                android:insetRight="0dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="&gt;"
+                                android:textSize="11sp"
+                                android:textColor="@android:color/white"
+                                android:backgroundTint="@android:color/holo_purple" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- REAR ROW -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- REAR LEFT -->
+                <include
+                    android:id="@+id/rearLeftSeat"
+                    layout="@layout/seat_cell_rear_left"/>
+
+                <!-- REAR CENTER -->
+                <include
+                    android:id="@+id/rearMidSeat"
+                    layout="@layout/seat_cell_rear_mid"/>
+
+                <!-- REAR RIGHT -->
+                <include
+                    android:id="@+id/rearRightSeat"
+                    layout="@layout/seat_cell_rear_right"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#05030f">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:padding="16dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvSeatTitle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Seat Controls"-->
+<!--            android:textColor="@android:color/holo_green_light"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginBottom="16dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvSeatHeatingLabel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Driver Seat Temperature"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_marginTop="20dp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:gravity="center_vertical">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnDecrease"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="-" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvSeatHeatingValue"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Level 0 (Off)"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="16sp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginEnd="20dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnIncrease"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="+" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvSeatStatus"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text=""-->
+<!--            android:textColor="@android:color/holo_blue_light"-->
+<!--            android:textSize="16sp"-->
+<!--            android:layout_marginTop="16dp" />-->
+
+<!--    </LinearLayout>-->
+
+<!--</ScrollView>-->

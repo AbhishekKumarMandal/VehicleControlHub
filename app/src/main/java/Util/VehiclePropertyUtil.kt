@@ -3,6 +3,7 @@ package Util
 import android.car.VehiclePropertyIds
 import android.car.hardware.property.CarPropertyManager
 import android.util.Log
+import java.lang.reflect.Modifier
 
 class VehiclePropertyUtil {
     companion object {
@@ -45,6 +46,29 @@ class VehiclePropertyUtil {
                 Log.e("VehiclePropertyUtil", "Failed to fetch HVAC_AC_ON config", e)
                 null
             }
+        }
+    }
+
+    object vehiclePropertyUtil {
+        private val propertyIdToNameMap: Map<Int, String> by lazy {
+            val map = mutableMapOf<Int, String>()
+
+            for(field in VehiclePropertyIds::class.java.declaredFields) {
+                try {
+                    if(Modifier.isStatic(field.modifiers) && field.type == Int::class.javaPrimitiveType) {
+                        val key = field.getInt(null)
+                        val name = field.name
+                        map[key] = name
+                    }
+                } catch (e: Exception) {
+                    Log.e("VehiclePropertyUtil", "Failed to read VehiclePropertyIds field ${field.name}", e)
+                }
+            }
+            map
+        }
+
+        fun getPropertyName(propertyId: Int): String {
+            return propertyIdToNameMap[propertyId] ?: "UNKNOWN PROPERTY($propertyId)"
         }
     }
 }
