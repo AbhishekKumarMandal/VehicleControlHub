@@ -22,6 +22,7 @@ class DashboardPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(
             0 -> TelemetryFragment()
             1 -> HvacFragment()
             2 -> SeatFragment() //PlaceholderFragment.newInstance("Seats - Coming soon")
+            3 -> LightFragment() //PlaceholderFragment.newInstance("Lights - Coming soon")
             4 -> BodyFragment() //PlaceholderFragment.newInstance("Body Control - Coming soon")
             5 -> CameraFragment()
             else -> PlaceholderFragment.newInstance("Coming soon")
