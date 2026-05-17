@@ -47,11 +47,12 @@ class CameraFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnLaunchCamera.setOnClickListener {
-            launchCameraApp()
+            //launchCameraApp()
+            launchRearCamera()
         }
     }
 
-    private fun launchCameraApp() {
+    /*private fun launchCameraApp() {
         try {
             val cameraIntent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
 
@@ -71,6 +72,26 @@ class CameraFragment : Fragment() {
         } catch (e: Exception) {
             Log.e(tag, "Failed to launch camera app", e)
             binding.tvCameraStatus.text = "Failed to launch camera app"
+        }
+    }*/
+
+    private fun launchRearCamera() {
+        try {
+            val intent = Intent("android.car.intent.action.REARVIEW_CAMERA")
+            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+
+            val activity = intent.resolveActivity(requireContext().packageManager)
+
+            if (activity != null) {
+                startActivity(intent)
+            } else {
+                binding.tvCameraStatus.text = "Rear camera app not available on this emulator"
+                Log.e(tag, "No activity found for rear camera intent")
+            }
+
+        } catch (e: Exception) {
+            binding.tvCameraStatus.text = "Failed to launch rear camera"
+            Log.e(tag, "Failed to launch rear camera", e)
         }
     }
 

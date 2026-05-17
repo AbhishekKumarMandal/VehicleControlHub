@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,37 +7,388 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:padding="24dp">
+        android:padding="16dp"
+        android:gravity="center_horizontal">
 
+        <!-- TITLE -->
         <TextView
-            android:id="@+id/tvHvacTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HVAC Controls"
             android:textColor="@android:color/holo_green_light"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"/>
 
-        <Switch
-            android:id="@+id/switchAc"
-            android:layout_width="wrap_content"
+        <!-- AC SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AC"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"/>
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tvHvacStatus"
-            android:layout_width="wrap_content"
+            <!-- PASSENGER -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/seat_cell_border">
+
+                <TextView
+                    android:text="Passenger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp">
+
+                    <Switch
+                        android:id="@+id/switchPassengerAC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AC"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:thumbTint="@color/switch_thumb_color"
+                        android:trackTint="@color/switch_track_color" />
+
+                    <TextView
+                        android:id="@+id/tvPassengerAcState"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="OFF"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp">
+
+                    <Button
+                        android:id="@+id/btnPassengerTempDown"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tvPassengerTemp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Temp:0"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"/>
+
+                    <Button
+                        android:id="@+id/btnPassengerTempUp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="+" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPassengerFanLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fan Speed"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvPassengerFanValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fan: 0"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp" />
+
+                <SeekBar
+                    android:id="@+id/seekPassengerFan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"/>
+
+            </LinearLayout>
+
+            <!-- DRIVER -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/seat_cell_border">
+
+                <TextView
+                    android:text="Driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp">
+
+                    <Switch
+                        android:id="@+id/switchDriverAC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AC"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:thumbTint="@color/switch_thumb_color"
+                        android:trackTint="@color/switch_track_color" />
+
+                    <TextView
+                        android:id="@+id/tvDriverAcState"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="OFF"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!-- TEMP -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp">
+
+                    <Button
+                        android:id="@+id/btnDriverTempDown"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tvDriverTemp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Temp:0"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"/>
+
+                    <Button
+                        android:id="@+id/btnDriverTempUp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="+" />
+                </LinearLayout>
+
+                <!-- FAN -->
+                <TextView
+                    android:id="@+id/tvDriverFanLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fan Speed"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvDriverFanValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fan: 0"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp" />
+
+                <SeekBar
+                    android:id="@+id/seekDriverFan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:progressTint="@android:color/holo_green_light"
+                    android:progressBackgroundTint="#555555"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- DEFROSTER SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HVAC requires privileged app"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:background="@drawable/seat_panel_border">
+
+            <TextView
+                android:text="Defroster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_green_light"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <Switch
+                    android:id="@+id/switchFrontDefroster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Front Defroster"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:thumbTint="@color/switch_thumb_color"
+                    android:trackTint="@color/switch_track_color" />
+
+                <TextView
+                    android:id="@+id/tvFrontDefrosterState"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <Switch
+                    android:id="@+id/switchRearDefroster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rear Defroster"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="6dp"
+                    android:thumbTint="@color/switch_thumb_color"
+                    android:trackTint="@color/switch_track_color"/>
+
+                <TextView
+                    android:id="@+id/tvRearDefrosterState"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
 </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#05030f">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:padding="24dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvHvacTitle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="HVAC Controls"-->
+<!--            android:textColor="@android:color/holo_green_light"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginBottom="16dp"/>-->
+
+<!--        <Switch-->
+<!--            android:id="@+id/switchAc"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="AC"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textSize="20sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvHvacStatus"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="AC OFF"-->
+<!--            android:textColor="@android:color/holo_blue_light"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginTop="16dp"/>-->
+
+<!--        <Switch-->
+<!--            android:id="@+id/switchDefroster"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Defroster"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:layout_marginTop="12dp" />-->
+
+<!--    </LinearLayout>-->
+
+<!--</ScrollView>-->
