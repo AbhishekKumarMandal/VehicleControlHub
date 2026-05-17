@@ -4,16 +4,19 @@
 
     <uses-feature android:name="android.hardware.type.automotive" />
 
-<!--    <uses-permission android:name="android.car.permission.CAR_SPEED" /> &lt;!&ndash; permission required to display car speed&ndash;&gt;-->
-<!--    <uses-permission android:name="android.car.permission.ENERGY"/> &lt;!&ndash; permission required to display EV_BATTERY_LEVEL&ndash;&gt;-->
-<!--    <uses-permission android:name="android.car.permission.CAR_INFO"/> &lt;!&ndash; permission required to display INFO_EV_BATTERY_CAPACITY &ndash;&gt;-->
-<!--    <uses-permission android:name="android.car.permission.ENERGY_PORTS"/> &lt;!&ndash; permission required to display EV_CHARGE_PORT_CONNECTED &ndash;&gt;-->
 
+    <!-- TELEMETRY RELATED PERMISSIONS -->
     <uses-permission android:name="android.car.permission.CAR_SPEED" /> <!-- permission required to display car speed-->
     <uses-permission android:name="android.car.permission.CAR_ENERGY" /> <!-- permission required to display EV_BATTERY_LEVEL-->
     <uses-permission android:name="android.car.permission.CAR_INFO" /> <!-- permission required to display INFO_EV_BATTERY_CAPACITY -->
     <uses-permission android:name="android.car.permission.CAR_ENERGY_PORTS" /> <!-- permission required to display EV_CHARGE_PORT_CONNECTED -->
+
+    <!-- PRIVILEGED PERMISSIONS -->
     <uses-permission android:name="android.car.permission.CONTROL_CAR_CLIMATE" /> <!-- permission required to display HVAC_AC_ON -->
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_SEATS" />
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_DOORS" />
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_WINDOWS" />
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_EXTERIOR_LIGHTS" />
 
 
     <application

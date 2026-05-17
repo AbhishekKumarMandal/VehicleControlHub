@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.example.vehiclecontrolhub">
+        <!-- TELEMETRY READ PERMISSIONS -->
+        <permission name="android.car.permission.CAR_SPEED" />
+        <permission name="android.car.permission.CAR_ENERGY" />
+        <permission name="android.car.permission.CAR_INFO" />
+        <permission name="android.car.permission.CAR_ENERGY_PORTS" />
+
+        <permission name="android.car.permission.CONTROL_CAR_CLIMATE" />
+        <permission name="android.car.permission.CONTROL_CAR_SEATS" />
+        <permission name="android.car.permission.CONTROL_CAR_DOORS" />
+        <permission name="android.car.permission.CONTROL_CAR_WINDOWS" />
+        <permission name="android.car.permission.CONTROL_CAR_EXTERIOR_LIGHTS" />
+    </privapp-permissions>
+</permissions>
