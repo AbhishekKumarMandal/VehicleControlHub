@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#05030f">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lights &amp; Visibility"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- EXTERIOR LIGHTS CARD -->
+        <LinearLayout
+            android:layout_width="460dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@drawable/seat_panel_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Exterior Lights"
+                android:textColor="@android:color/holo_green_light"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Headlights -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Headlights"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <Switch
+                    android:id="@+id/switchHeadlights"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:thumbTint="@color/switch_thumb_color"
+                    android:trackTint="@color/switch_track_color" />
+
+                <TextView
+                    android:id="@+id/tvHeadlightsState"
+                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:text="OFF"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- High Beam -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="High Beam"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <Switch
+                    android:id="@+id/switchHighBeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/switch_thumb_color"
+                    android:trackTint="@color/switch_track_color" />
+
+                <TextView
+                    android:id="@+id/tvHighBeamState"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Hazard -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Hazard Light"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white" />
+
+                <Switch
+                    android:id="@+id/switchHazard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/switch_thumb_color"
+                    android:trackTint="@color/switch_track_color" />
+
+                <TextView
+                    android:id="@+id/tvHazardState"
+                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:text="OFF"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Front Fog -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="220dp"
+                    android:layout_weight="1"
+                    android:text="Front Fog Light"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white" />
+
+                <Switch
+                    android:id="@+id/switchFrontFog"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:thumbTint="@color/switch_thumb_color"
+                    android:trackTint="@color/switch_track_color" />
+
+                <TextView
+                    android:id="@+id/tvFrontFogState"
+                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:text="OFF"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Rear Fog -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="220dp"
+                    android:layout_weight="1"
+                    android:text="Rear Fog Light"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white" />
+
+                <Switch
+                    android:id="@+id/switchRearFog"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:thumbTint="@color/switch_thumb_color"
+                    android:trackTint="@color/switch_track_color" />
+
+                <TextView
+                    android:id="@+id/tvRearFogState"
+                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:text="OFF"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- CABIN LIGHTS CARD -->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:padding="12dp"-->
+<!--            android:background="@drawable/seat_panel_border">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:text="Cabin Lights"-->
+<!--                android:textColor="@android:color/holo_green_light"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="24sp" />-->
+
+<!--            <SeekBar-->
+<!--                android:id="@+id/seekCabinLight"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:progressTint="@android:color/holo_green_light"-->
+<!--                android:progressBackgroundTint="#555555"-->
+<!--                android:thumbTint="@android:color/holo_green_light" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvCabinLightStatus"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Not supported on this emulator"-->
+<!--                android:textColor="#888888"-->
+<!--                android:textSize="18sp"-->
+<!--                android:layout_marginTop="6dp" />-->
+
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#05030f">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:padding="24dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvHvacTitle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Light Controls"-->
+<!--                android:textColor="@android:color/holo_green_light"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginBottom="16dp"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="6dp">-->
+
+<!--                <Switch-->
+<!--                    android:id="@+id/switchHeadLight"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Head Lights "-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:thumbTint="@color/switch_thumb_color"-->
+<!--                    android:trackTint="@color/switch_track_color" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvHeadLight"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="OFF"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:gravity="center" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="6dp">-->
+
+<!--                <Switch-->
+<!--                    android:id="@+id/switchHighBeam"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="High Beam "-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:thumbTint="@color/switch_thumb_color"-->
+<!--                    android:trackTint="@color/switch_track_color" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvHighBeam"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="OFF"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:gravity="center" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="6dp">-->
+
+<!--                <Switch-->
+<!--                    android:id="@+id/switchHazardLight"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Hazard Light"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:thumbTint="@color/switch_thumb_color"-->
+<!--                    android:trackTint="@color/switch_track_color" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvHazardLight"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="OFF"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:gravity="center" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="6dp">-->
+
+<!--                <Switch-->
+<!--                    android:id="@+id/switchFrontFogLight"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Front Fog Light "-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:thumbTint="@color/switch_thumb_color"-->
+<!--                    android:trackTint="@color/switch_track_color" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvFrontFogLight"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="OFF"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:gravity="center" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="6dp">-->
+
+<!--                <Switch-->
+<!--                    android:id="@+id/switchRearFogLight"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Rear Fog Light"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:thumbTint="@color/switch_thumb_color"-->
+<!--                    android:trackTint="@color/switch_track_color" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvRearFogLight"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="OFF"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:gravity="center" />-->
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
